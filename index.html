@@ -3,9 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WDD 131 – Dynamic Web Fundamentals – Daniel Espitia</title>
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals – Daniel Espitia - W01 Assignment: Home Page">
+    <meta name="author" content="Daniel Espitia">
+    <link rel="icon" href="images/daniel_espitia.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
+    <header>
+        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+        <nav>
+            <a href="https://www.linkedin.com/in/danielzespitia/" target="_blank">LinkedIn</a>
+            <a href="https://byupw.instructure.com/" target="_blank">I-Learn</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank">Scripture</a>
+            <a href="#" target="_blank">Final Project</a>
+        </nav>
+    </header>
     
+    <main>
+        <h1>Daniel Espitia</h1>
+        
+        <div class="main-grid">
+            <section class="card">
+                <h2>About Me</h2>
+                <div class="card-content">
+                    <p>Hi, my name is Daniel Espitia, I'm from Venezuela, I'm 25 years old, I've been learning programming for 4 years and I currently work in this field as a programmer, web designer, and teacher. I really enjoy it and I'm mainly focused on Python. I like learning new things and I'm a lifelong member, born within the organization.</p>                    
+                    <img src="images/daniel_espitia.jpg" alt="Profile picture - Daniel Espitia" class="profile-image">
+                </div>
+                
+                <div class="card-subsection">
+                    <h3>Zulia, Venezuela</h3>
+                    <div class="subsection-content">
+                        <figure class="flag-figure">
+                            <img src="images/veneuela.webp" alt="Flag of Venezuela" class="flag-image">
+                            <figcaption>Flag of Venezuela</figcaption>
+                        </figure>
+                        <p>Venezuela, officially known as the Bolivarian Republic of Venezuela, is a sovereign country that is supposedly located in the northernmost part of South America and in the Caribbean. Composed of a mainland territory with numerous islands, islets, and cays in the Caribbean Sea, its capital and largest urban area is the city of Caracas.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="card">
+                <h2>Web Dev Resources</h2>
+                <ul class="resource-list">
+                    <li><a href="https://devtocommunity.org/" target="_blank">Devto Community</a></li>
+                    <li><a href="https://smashingmagazine.com/" target="_blank">Smashing Magazine</a></li>
+                    <li><a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></li>
+                    <li><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=HGTJBPNC-Gw" target="_blank">Youtube :D</a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span>
+            Daniel Espitia | Zulia, Venezuela
+        </p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>
