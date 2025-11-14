@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F5F5F5; 
+    color: #333; 
+    line-height: 1.6;
+}
+
+header {
+    background-color: #4A148C; 
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; 
+}
+
+header h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+#menu {
+    display: block; 
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 2.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.5rem;
+    line-height: 1;
+}
+
+nav {
+    display: none; 
+    flex-direction: column;
+    background-color: #310F5E; 
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    border-top: 1px solid #6A1B9A; 
+}
+
+nav.open {
+    display: flex;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 1.2rem;
+    text-align: center;
+    border-bottom: 1px solid #4A148C; 
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    background-color: #6A1B9A; 
+    color: white;
+}
+
+nav a.active {
+    background-color: #E1BEE7; 
+    color: #000000; 
+}
+
+nav a.active:hover {
+    background-color: #E1BEE7;
+    color: #000000;
+}
+
+main {
+    max-width: 95%;
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+main h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #4A148C; 
+    font-size: 2rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 1.5rem;
+}
+
+figure {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden; 
+    margin: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+figure:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+figure figcaption {
+    text-align: center;
+    padding: 1rem;
+    color: #555;
+    font-style: italic;
+    font-size: 0.95rem;
+}
+
+footer {
+    background-color: #4A148C; 
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-top: 2rem;
+}

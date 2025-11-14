@@ -1,0 +1,48 @@
+@media (min-width: 640px) {
+    
+    #menu {
+        display: none;
+    }
+
+    nav {
+        display: flex; 
+        flex-direction: row; 
+        position: static; 
+        background-color: transparent; 
+        width: auto; 
+        border-top: none; 
+    }
+
+    nav a {
+        border-bottom: none; 
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: background-color 0.3s, color 0.3s;
+        margin-left: 0.5rem;
+        font-size: 1rem;
+        color: white; 
+    }
+
+    nav a:hover {
+        background-color: #E1BEE7; 
+        color: #4A148C; 
+    }
+    
+    nav a.active {
+        background-color: #F3E5F5; 
+        color: #000000; 
+    }
+
+    nav a.active:hover {
+        background-color: #F3E5F5;
+        color: #000000;
+    }
+
+    main {
+        max-width: 1200px; 
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
