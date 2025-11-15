@@ -1,0 +1,249 @@
+:root {
+    --primary-color: #023047;
+    --secondary-color: #FCD116;
+    --accent-color: #CE1126;
+    --bg-green: #38b000;
+    
+    --text-light: #FFFFFF;
+    --text-dark: #333333;
+    --bg-light: #FAFAFA;
+    --bg-card: rgba(255, 255, 255, 0.9);
+
+    --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+                 "Helvetica Neue", Arial, sans-serif;
+    --font-heading: "Georgia", serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+}
+
+.page-container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+.main-header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 0px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.main-header::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 15px;
+    background-color: var(--bg-green);
+}
+
+.main-header h1 {
+    color: var(--text-light);
+    font-size: 2rem;
+    text-shadow: 1px 1px 2px var(--accent-color);
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 0 1rem 0;
+}
+
+.hero {
+    grid-column: 1 / -1;
+    position: relative;
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: none;
+}
+
+.hero picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cards-container {
+    display: contents;
+}
+
+.card {
+    background-color: transparent;
+    backdrop-filter: none;
+    border: none;
+    box-shadow: none;
+    padding: 1rem;
+}
+
+.card h2 {
+    border-bottom: none;
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.card ul {
+    list-style: none;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.card li {
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+}
+
+.card li strong {
+    color: var(--primary-color);
+}
+
+.weather-icon-svg {
+    display: block;
+    margin: 1rem auto;
+    width: 80px;
+    height: 80px;
+}
+
+.weather-title::after {
+    display: none;
+}
+
+.main-footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.main-footer p {
+    margin-bottom: 0.25rem;
+}
+
+
+@media (min-width: 800px) {
+    
+    .main-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .main-content {
+        grid-template-rows: 1fr;
+        padding: 0;
+        position: relative;
+        min-height: 600px;
+    }
+
+    .hero {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        border-radius: 0;
+    }
+    
+    .cards-container {
+        display: grid;
+        position: relative;
+        z-index: 2;
+        grid-template-columns: minmax(300px, 400px) 1fr minmax(300px, 350px);
+        gap: 2rem;
+        padding: 2rem;
+        align-items: start;
+        height: 100%;
+    }
+
+    .card {
+        background-color: var(--bg-card);
+        backdrop-filter: blur(5px);
+        border: 1px solid var(--primary-color);
+        border-radius: 8px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .card h2 {
+        border-bottom: 0px solid var(--secondary-color);
+        justify-content: flex-start;
+        font-size: 1.75rem;
+        text-align: left;
+        padding: 0;
+        margin-bottom: 0.75rem;
+    }
+    
+    .weather-title {
+    }
+
+    .card ul {
+        width: auto;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    
+    .cardd-data {
+        background-color: #38b000;
+        margin-left: -35px;
+        margin-right: 15px;
+        padding: 10px 5px 5px 20px;
+    }
+    
+    .card-data {
+        grid-column: 1 / 2;
+    }
+
+    .card-weather {
+        grid-column: 3 / 4;
+        align-self: end;
+    }
+    
+    .weather-icon-svg {
+        display: none;
+    }
+
+    .weather-title::before {
+        display: none;
+    }
+    .weather-title::after {
+        content: '🌦️';
+        display: inline-block;
+        font-size: 1.5rem;
+        margin-left: 0.5rem;
+    }
+}
